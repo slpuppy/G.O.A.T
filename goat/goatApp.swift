@@ -11,7 +11,7 @@ struct goatApp: App {
     
     var body: some Scene {
         WindowGroup {
-            let viewModel = AppViewModel()
+            let viewModel = AuthViewModel()
             ContentView()
                 .environmentObject(viewModel)
         }
