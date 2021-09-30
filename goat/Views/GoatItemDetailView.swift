@@ -8,13 +8,74 @@
 import SwiftUI
 
 struct GoatItemDetailView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
+    @StateObject var goatPressed: GoatItem
+    
+    @StateObject var viewModel = GoatItemViewModel()
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+       
+        VStack{
+            
+            
+            Text(goatPressed.title)
+            
+            Button(action: {
+             
+               handleDeletePressed()
+                
+            }, label: {
+                
+                
+                ZStack {
+                    Rectangle()
+                        .cornerRadius(15)
+                        .foregroundColor(Color("mainPink"))
+                        .frame(maxHeight: 60)
+                        .padding()
+                    
+                    HStack{
+                        
+                        Image(systemName: "trash").foregroundColor(Color("darkBlu"))
+                        
+                        Text("Delete G.O.A.T").foregroundColor(Color("darkBlu"))
+                    }
+                }
+                
+                
+            })
+        }
+        
+       
+        
+        
+        
+        
     }
+    
+    
+    func handleDeletePressed(){
+        
+        self.viewModel.delete()
+        dismiss()
+        
+        
+    }
+    
+    func dismiss() {
+        
+        
+        self.presentationMode.wrappedValue.dismiss()
+        
+    }
+    
 }
 
-struct GoatItemDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        GoatItemDetailView()
-    }
-}
+//struct GoatItemDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GoatItemDetailView()
+//    }
+//}

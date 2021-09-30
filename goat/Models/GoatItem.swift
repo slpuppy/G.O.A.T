@@ -13,9 +13,10 @@ class GoatItem: Codable, JSONRepresentable, ObservableObject, Identifiable {
     
     
     
-    internal init(title: String, link: String) {
+    internal init(title: String, link: String, comments: [String]) {
         self.title = title
         self.link = link
+        self.comments = comments
     }
     
     
@@ -23,6 +24,7 @@ class GoatItem: Codable, JSONRepresentable, ObservableObject, Identifiable {
     @DocumentID var docID: String? = UUID().uuidString
      var title: String
      var link: String
+     var comments: [String]?
      //var id = UUID()
 
 
@@ -32,7 +34,7 @@ class GoatItem: Codable, JSONRepresentable, ObservableObject, Identifiable {
         case link
        // case id
         case docID
-        
+        case comments
     }
 
 

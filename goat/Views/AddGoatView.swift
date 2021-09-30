@@ -10,10 +10,8 @@ import SwiftUI
 struct AddGoatView: View {
     
  @Environment(\.presentationMode) var presentationMode
-    
-    
-    
-    @StateObject var viewModel = GoatItemViewModel()
+ 
+ @StateObject var viewModel = GoatItemViewModel()
     
     
     var body: some View {

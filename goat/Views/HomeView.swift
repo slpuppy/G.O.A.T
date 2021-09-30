@@ -18,8 +18,7 @@ struct HomeView: View {
         
         VStack{
             
-            
-            GoatList()
+           GoatList()
             
             Button(action: {
                 presentAddNewGoatScreen.toggle()

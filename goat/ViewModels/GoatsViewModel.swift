@@ -19,12 +19,12 @@ class GoatsViewModel: ObservableObject {
     
     private var dataBase = Firestore.firestore()
     
+    
     func fetchData() {
         
         dataBase.collection("goats").addSnapshotListener { (querySnapshot, error) in
             
             guard let documents = querySnapshot?.documents else {
-                
                 print("No documents")
                 return
            }
