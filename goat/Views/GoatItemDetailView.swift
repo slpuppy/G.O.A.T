@@ -20,12 +20,19 @@ struct GoatItemDetailView: View {
        
         VStack{
             
+            HStack {
+                Text(goatPressed.title)
+                    .font(.system(size: 23, weight: .bold, design: .default))
+                .foregroundColor(Color("textColor"))
+                
+               
+            }
             
-            Text(goatPressed.title)
+            Spacer()
             
             Button(action: {
              
-               handleDeletePressed()
+                handleDeletePressed(id: goatPressed.docID)
                 
             }, label: {
                 
@@ -47,7 +54,7 @@ struct GoatItemDetailView: View {
                 
                 
             })
-        }
+        }.padding()
         
        
         
@@ -57,9 +64,10 @@ struct GoatItemDetailView: View {
     }
     
     
-    func handleDeletePressed(){
+    func handleDeletePressed(id: String?){
         
-        self.viewModel.delete()
+        
+        self.viewModel.removeGoat(id: id)
         dismiss()
         
         

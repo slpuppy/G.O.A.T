@@ -14,13 +14,18 @@ struct GoatList: View {
     
    var body: some View {
         
-    VStack {
-            
-        ForEach(viewModel.goats) { goat in
-                    
-            GoatListRow(row: goat)
-                
-        }
+    
+       ScrollView {
+           
+           VStack {
+               ForEach(viewModel.goats) { goat in
+                        
+                GoatListRow(row: goat)
+               
+               }
+           
+              
+           }
     }.padding()
     
     .onAppear() {
@@ -41,26 +46,41 @@ struct GoatListRow: View {
         
        ZStack{
             Rectangle()
-                .cornerRadius(15)
-                .foregroundColor(Color("bgColor"))
+                .cornerRadius(30)
+                .foregroundColor(Color("mainPink"))
                 .shadow(color: Color.black.opacity(0.1), radius: 13.0, x: 0.0, y: 4.0)
             
-            HStack{
-                Text(row.title).font(.system(size: 20, weight: .semibold, design: .default))
-                    .foregroundColor(Color("darkBlu"))
-                
+           VStack(alignment: .leading) {
+              
+               Image("minigoat")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxHeight: 35)
                     
-                Spacer()
-                Image(systemName: "link").foregroundColor(Color("mainPink"))
-            
-            }.padding(15)
+               HStack{
+               Text(row.title).font(.system(size: 22, weight: .semibold, design: .default))
+                        .foregroundColor(Color.white)
+                        .multilineTextAlignment(.leading)
+                        .padding([.top, .bottom], 40)
+                        
+                       
+                    
+                        
+                    Spacer()
+                    Image(systemName: "link.circle.fill").foregroundColor(Color.white).font(.system(size: 30))
+               }
+            }
+            padding()
+           }
        }
+                .padding([.top, .bottom], 5)
+                
         
         }
     }
     
     
-}
+
 
     
 struct GoatList_Previews: PreviewProvider {

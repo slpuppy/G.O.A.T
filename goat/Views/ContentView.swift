@@ -7,52 +7,48 @@
 
 import SwiftUI
 
+
+enum Tabs: String {
+    
+    case home = "Goats"
+    case profile = "Profile"
+    
+}
+
 struct ContentView: View {
     
     @EnvironmentObject var viewModel: AuthViewModel
+   
+    @State var selectedTab: Tabs = .home
     
     var body: some View {
         
-        NavigationView{
-            
-            ZStack{
-
-                Color("bgColor").edgesIgnoringSafeArea(.all)
+        TabView(selection: $selectedTab){
+                HomeView()
+                    .tabItem{
+                        Image(systemName: "house.fill")
+                     
+                    }
+                    .tag(Tabs.home)
                 
-                if viewModel.isSignedIn {
-
-                    VStack{
+                ConfigView()
+                    .tabItem{
                         
-                        HomeView()
-
-                     }
-                }
-
-                else {
-
-                    SignInView()
-
-                }
-                
-                
+                        Image(systemName: "gearshape")
+                           
+                        
+                    }
+                    .tag(Tabs.profile)
                 
             }
+        
+       .navigationTitle(selectedTab.rawValue)
+           .navigationBarTitleDisplayMode(.large)
+           .navigationViewStyle(StackNavigationViewStyle())
+        .accentColor(Color("mainPink"))
+            .background(Color("bgColor"))
             
-           
             
-            
-            
-            
-        }
-        .onAppear{
-            viewModel.signedIn = viewModel.isSignedIn
-        }
-        
-        
-        
-        
-        
-        
     }
 }
 

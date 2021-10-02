@@ -9,66 +9,40 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @EnvironmentObject var viewModel: AuthViewModel
+   
     @State private var presentAddNewGoatScreen = false
+ 
     
     
     var body: some View {
-        
-        
         VStack{
-            
-           GoatList()
-            
+                GoatList()
+                
             Button(action: {
-                presentAddNewGoatScreen.toggle()
-                
-            }, label: {
-                
-                
-                ZStack {
-                    Rectangle()
-                        .cornerRadius(15)
-                        .foregroundColor(Color("mainPink"))
-                        .frame(maxHeight: 60)
-                        .padding()
-                    
-                    HStack{
+                    presentAddNewGoatScreen.toggle()
+                }, label: {
+                    ZStack {
+                        Rectangle()
+                            .cornerRadius(15)
+                            .foregroundColor(Color("mainPink"))
+                            .frame(maxHeight: 60)
+                            .padding()
                         
-                        Image(systemName: "plus").foregroundColor(Color("darkBlu"))
-                        
-                        Text("Add Goat").foregroundColor(Color("darkBlu"))
+                        HStack{
+                            Image(systemName: "plus").foregroundColor(Color("darkBlu"))
+                            Text("Add Goat").foregroundColor(Color("darkBlu"))
+                        }
                     }
-                }
-                
-                
-            })
+                })
+            }
+            .sheet(isPresented: $presentAddNewGoatScreen) {
+                AddGoatView().navigationBarTitle("Add G.O.A.T")
+            }.background(Color("bgColor"))
             
-            Button(action: {
-
-                viewModel.signOut()
-
-            }, label: {
-
-                ZStack{
-                    Rectangle()
-                        .cornerRadius(15)
-                        .foregroundColor(Color("mainPink"))
-                        .frame(maxHeight: 60)
-                        .padding()
-                    Text("Sign Out").font(.system(size: 18))
-                        .foregroundColor(.white)
-
-                }
-
-            })
             
-        }.sheet(isPresented: $presentAddNewGoatScreen) {
-            
-            AddGoatView().navigationBarTitle("Add G.O.A.T")
-            
-        }
-     }
+        
+        
+    }
 }
 
 struct Home_Previews: PreviewProvider {

@@ -12,6 +12,8 @@
 		75019B982701F55500FD8C90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75019B972701F55500FD8C90 /* Assets.xcassets */; };
 		75019B9B2701F55500FD8C90 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75019B9A2701F55500FD8C90 /* Preview Assets.xcassets */; };
 		75019BA72703512F00FD8C90 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75019BA62703512F00FD8C90 /* SignInView.swift */; };
+		7512269F2708058C00C806BF /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7512269E2708058C00C806BF /* ConfigView.swift */; };
+		751226A12708070F00C806BF /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751226A02708070F00C806BF /* LaunchView.swift */; };
 		754303DB270526DE003A70E6 /* GoatItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754303DA270526DE003A70E6 /* GoatItemViewModel.swift */; };
 		754303DE27052C3E003A70E6 /* JSONRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754303DD27052C3E003A70E6 /* JSONRepresentable.swift */; };
 		754303E02705E68D003A70E6 /* AddGoatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754303DF2705E68D003A70E6 /* AddGoatView.swift */; };
@@ -35,6 +37,8 @@
 		75019B972701F55500FD8C90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75019B9A2701F55500FD8C90 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		75019BA62703512F00FD8C90 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		7512269E2708058C00C806BF /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		751226A02708070F00C806BF /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		754303DA270526DE003A70E6 /* GoatItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoatItemViewModel.swift; sourceTree = "<group>"; };
 		754303DD27052C3E003A70E6 /* JSONRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRepresentable.swift; sourceTree = "<group>"; };
 		754303DF2705E68D003A70E6 /* AddGoatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoatView.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				75B886582704A5F800C58051 /* SignUpView.swift */,
 				754303DF2705E68D003A70E6 /* AddGoatView.swift */,
 				754303E12705EDA5003A70E6 /* GoatItemDetailView.swift */,
+				7512269E2708058C00C806BF /* ConfigView.swift */,
+				751226A02708070F00C806BF /* LaunchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75B886572704A57400C58051 /* AuthViewModel.swift in Sources */,
+				751226A12708070F00C806BF /* LaunchView.swift in Sources */,
 				75B8865D2704B13D00C58051 /* GoatItem.swift in Sources */,
 				75B886592704A5F800C58051 /* SignUpView.swift in Sources */,
 				75019B962701F55200FD8C90 /* ContentView.swift in Sources */,
@@ -284,6 +291,7 @@
 				754303E02705E68D003A70E6 /* AddGoatView.swift in Sources */,
 				75B886612704C21400C58051 /* GoatsViewModel.swift in Sources */,
 				754303E22705EDA5003A70E6 /* GoatItemDetailView.swift in Sources */,
+				7512269F2708058C00C806BF /* ConfigView.swift in Sources */,
 				75B886632704C25B00C58051 /* GoatList.swift in Sources */,
 				75B8865B2704A8A200C58051 /* HomeView.swift in Sources */,
 				75019B942701F55200FD8C90 /* goatApp.swift in Sources */,

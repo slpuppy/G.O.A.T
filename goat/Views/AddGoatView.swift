@@ -18,18 +18,37 @@ struct AddGoatView: View {
         
         
         VStack{
+            
+            Text("Add New G.O.A.T").font(.headline)
+                .padding(.bottom, 30)
+                
+            
+            
+            HStack{
+                Text("What is the G.O.A.T ?").font(.system(size: 23, weight: .bold, design: .default))
+                    .foregroundColor(Color("textColor"))
+                Spacer()
+            }
         
             TextField("Goat Title", text: $viewModel.goat.title)
             .padding()
             .background(Color("mainBlu")).opacity(0.5)
             .cornerRadius(15.0)
-            .padding(.bottom, 10)
+           
+            
+            HStack{
+                Text("What is the link to it ?").font(.system(size: 23, weight: .bold, design: .default))
+                    .foregroundColor(Color("textColor"))
+                Spacer()
+            }.padding(.top, 30)
         
             TextField("Goat access link", text: $viewModel.goat.link)
             .padding()
             .background(Color("mainBlu")).opacity(0.5)
             .cornerRadius(15.0)
-            .padding(.bottom, 10)
+            
+            
+            
         
         
         
@@ -43,14 +62,11 @@ struct AddGoatView: View {
                     .cornerRadius(15)
                     .foregroundColor(Color("mainPink"))
                     .frame(maxHeight: 60)
-                    .padding()
+                    
                 Text("Save G.O.A.T").font(.system(size: 18))
                     .foregroundColor(.white)
-               
-               
-}
-            
-        })
+             }
+        }).padding(.top, 50)
             Spacer()
         }.padding()
             .navigationBarTitle("Add G.O.A.T")
