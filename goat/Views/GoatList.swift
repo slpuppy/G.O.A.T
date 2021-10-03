@@ -50,35 +50,29 @@ struct GoatListRow: View {
                 .foregroundColor(Color("mainPink"))
                 .shadow(color: Color.black.opacity(0.1), radius: 13.0, x: 0.0, y: 4.0)
             
-           VStack(alignment: .leading) {
-              
-               Image("minigoat")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxHeight: 35)
-                    
+           VStack {
                HStack{
-               Text(row.title).font(.system(size: 22, weight: .semibold, design: .default))
-                        .foregroundColor(Color.white)
-                        .multilineTextAlignment(.leading)
-                        .padding([.top, .bottom], 40)
-                        
-                       
-                    
-                        
-                    Spacer()
-                    Image(systemName: "link.circle.fill").foregroundColor(Color.white).font(.system(size: 30))
-               }
-            }
-            padding()
-           }
-       }
-                .padding([.top, .bottom], 5)
+               Text(row.title)
+                       .font(.system(size: 22,
+                                     weight: .semibold,
+                                     design: .default))
+                                               .foregroundColor(Color.white)
+                                               .multilineTextAlignment(.leading)
+                                               .padding([.top, .bottom], 40)
+
+                   Spacer()
+                   Image(systemName: "link").foregroundColor(Color.white)
                 
+               }
+               
+           }.padding()
+       }.padding([.top, .bottom], 5)
         
         }
     }
     
+    
+}
     
 
 
