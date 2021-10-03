@@ -16,6 +16,7 @@
 		754303DE27052C3E003A70E6 /* JSONRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754303DD27052C3E003A70E6 /* JSONRepresentable.swift */; };
 		754303E02705E68D003A70E6 /* AddGoatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754303DF2705E68D003A70E6 /* AddGoatView.swift */; };
 		754303E22705EDA5003A70E6 /* GoatItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754303E12705EDA5003A70E6 /* GoatItemDetailView.swift */; };
+		75951523270A6052001DE3D0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75951522270A6052001DE3D0 /* ProfileView.swift */; };
 		75B886552703CDC900C58051 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75B886542703CDC900C58051 /* GoogleService-Info.plist */; };
 		75B886572704A57400C58051 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B886562704A57400C58051 /* AuthViewModel.swift */; };
 		75B886592704A5F800C58051 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B886582704A5F800C58051 /* SignUpView.swift */; };
@@ -39,6 +40,7 @@
 		754303DD27052C3E003A70E6 /* JSONRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRepresentable.swift; sourceTree = "<group>"; };
 		754303DF2705E68D003A70E6 /* AddGoatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoatView.swift; sourceTree = "<group>"; };
 		754303E12705EDA5003A70E6 /* GoatItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoatItemDetailView.swift; sourceTree = "<group>"; };
+		75951522270A6052001DE3D0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		75B886542703CDC900C58051 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		75B886562704A57400C58051 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		75B886582704A5F800C58051 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				75B886582704A5F800C58051 /* SignUpView.swift */,
 				754303DF2705E68D003A70E6 /* AddGoatView.swift */,
 				754303E12705EDA5003A70E6 /* GoatItemDetailView.swift */,
+				75951522270A6052001DE3D0 /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				754303DE27052C3E003A70E6 /* JSONRepresentable.swift in Sources */,
 				75019BA72703512F00FD8C90 /* SignInView.swift in Sources */,
 				754303E02705E68D003A70E6 /* AddGoatView.swift in Sources */,
+				75951523270A6052001DE3D0 /* ProfileView.swift in Sources */,
 				75B886612704C21400C58051 /* GoatsViewModel.swift in Sources */,
 				754303E22705EDA5003A70E6 /* GoatItemDetailView.swift in Sources */,
 				75B886632704C25B00C58051 /* GoatList.swift in Sources */,

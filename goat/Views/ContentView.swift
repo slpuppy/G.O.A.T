@@ -21,11 +21,23 @@ struct ContentView: View {
                 
                 if viewModel.isSignedIn {
 
-                    VStack{
+                    TabView{
                         
                         HomeView()
+                            .tabItem{
+                                
+                                Image(systemName: "house")
+                                
+                            }
+                        
+                        ProfileView()
+                            .tabItem{
+                                Image(systemName: "person.crop.circle")
+                                
+                            }
+                        
 
-                     }
+                    }.accentColor(Color("mainPink"))
                 }
 
                 else {

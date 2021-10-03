@@ -59,7 +59,7 @@ struct GoatItemDetailView: View {
     
     func handleDeletePressed(){
         
-        self.viewModel.delete()
+        self.viewModel.removeGoat(goat: goatPressed)
         dismiss()
         
         

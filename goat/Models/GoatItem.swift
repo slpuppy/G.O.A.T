@@ -21,7 +21,7 @@ class GoatItem: Codable, JSONRepresentable, ObservableObject, Identifiable {
     
     
      
-    @DocumentID var docID: String? = UUID().uuidString
+    @DocumentID var docID: String? 
      var title: String
      var link: String
      var comments: [String]?

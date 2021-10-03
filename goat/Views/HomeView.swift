@@ -43,27 +43,7 @@ struct HomeView: View {
                 
                 
             })
-            
-            Button(action: {
-
-                viewModel.signOut()
-
-            }, label: {
-
-                ZStack{
-                    Rectangle()
-                        .cornerRadius(15)
-                        .foregroundColor(Color("mainPink"))
-                        .frame(maxHeight: 60)
-                        .padding()
-                    Text("Sign Out").font(.system(size: 18))
-                        .foregroundColor(.white)
-
-                }
-
-            })
-            
-        }.sheet(isPresented: $presentAddNewGoatScreen) {
+             }.sheet(isPresented: $presentAddNewGoatScreen) {
             
             AddGoatView().navigationBarTitle("Add G.O.A.T")
             

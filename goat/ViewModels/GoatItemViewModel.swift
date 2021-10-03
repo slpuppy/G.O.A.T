@@ -30,15 +30,11 @@ class GoatItemViewModel: ObservableObject {
         addGoat(goat: goat)
         }
     
-    func delete(){
-        
-        removeGoat()
-        
-    }
     
     
     
-    func removeGoat() {
+    
+    func removeGoat(goat: GoatItem) {
         if let documentId = goat.docID {
             print(documentId)
             dataBase.collection("goats").document(documentId).delete() { error in
