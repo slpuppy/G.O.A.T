@@ -22,11 +22,11 @@ struct GoatList: View {
                         
                 GoatListRow(row: goat)
                
-               }
+               }.padding([.leading, .trailing], 20)
            
               
            }
-    }.padding()
+    }
     
     .onAppear() {
             
@@ -45,16 +45,11 @@ struct GoatListRow: View {
         NavigationLink(destination: GoatItemDetailView(goatPressed: row.self)) {
         
        ZStack{
-            Rectangle()
-                .cornerRadius(30)
-                .foregroundColor(Color("mainPink"))
-                .shadow(color: Color.black.opacity(0.1), radius: 13.0, x: 0.0, y: 4.0)
-            
-           VStack {
+            VStack {
                HStack{
                Text(row.title)
-                       .font(.system(size: 22,
-                                     weight: .semibold,
+                       .font(.system(size: 24,
+                                     weight: .bold,
                                      design: .default))
                                                .foregroundColor(Color.white)
                                                .multilineTextAlignment(.leading)
@@ -62,11 +57,18 @@ struct GoatListRow: View {
 
                    Spacer()
                    Image(systemName: "link").foregroundColor(Color.white)
+                       .font(.system(size: 20))
                 
                }
                
            }.padding()
-       }.padding([.top, .bottom], 5)
+       }
+        .background(Color("mainPink"))
+        
+        .cornerRadius(30)
+        .shadow(color: .black.opacity(0.1), radius: 13, x: 0, y: 4)
+        .padding([.top, .bottom], 10)
+        
         
         }
     }

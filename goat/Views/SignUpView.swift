@@ -25,6 +25,8 @@ struct SignUpView: View {
                     .scaledToFit()
                     .padding(.leading, 50)
                     .padding(.trailing, 50)
+                    .padding(.bottom, 20)
+                
                 TextField("Email", text: $email)
                     .padding()
                     .background(Color("mainBlu")).opacity(0.5)

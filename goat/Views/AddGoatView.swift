@@ -7,10 +7,14 @@
 
 import SwiftUI
 
+
+
+
+
 struct AddGoatView: View {
     
  @Environment(\.presentationMode) var presentationMode
- 
+    
  @StateObject var viewModel = GoatItemViewModel()
     
     
@@ -47,11 +51,6 @@ struct AddGoatView: View {
             .background(Color("mainBlu")).opacity(0.5)
             .cornerRadius(15.0)
             
-            
-            
-        
-        
-        
         Button(action: {
             
             handleSaveTapped()

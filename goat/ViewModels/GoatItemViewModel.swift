@@ -18,7 +18,7 @@ class GoatItemViewModel: ObservableObject {
     private var dataBase = Firestore.firestore()
     
     
-    func addGoat(goat: GoatItem) {
+   private func addGoat(goat: GoatItem) {
         do {
            let _  = try dataBase.collection("goats").addDocument(from: goat)
         } catch {
@@ -27,8 +27,36 @@ class GoatItemViewModel: ObservableObject {
     }
     
    func save() {
-        addGoat(goat: goat)
+        updateOrAddGoat()
         }
+    
+    
+    private func updateGoatInfo(_ goat: GoatItem) {
+        if let documentId = goat.docID {
+            do {
+                try dataBase.collection("goats").document(documentId).setData(from: goat)
+            } catch {
+                print(error)
+                
+            }
+        }
+    }
+    
+    private func updateOrAddGoat() {
+        
+        if let _ = goat.docID {
+            
+            self.updateGoatInfo(self.goat)
+            
+        }
+        else {
+            
+            addGoat(goat: goat)
+            
+        }
+        
+        
+    }
     
    
     

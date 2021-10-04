@@ -16,6 +16,7 @@ struct SignInView: View {
                 .scaledToFit()
                 .padding(.leading, 50)
                 .padding(.trailing, 50)
+                .padding(.bottom, 20)
             TextField("Email", text: $email)
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
