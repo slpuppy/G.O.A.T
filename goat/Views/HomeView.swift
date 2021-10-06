@@ -29,14 +29,15 @@ struct HomeView: View {
                             .padding()
                         
                         HStack{
-                            Image(systemName: "plus").foregroundColor(Color("darkBlu"))
-                            Text("Add Goat").foregroundColor(Color("darkBlu"))
+                            Image(systemName: "plus.circle").foregroundColor(Color("darkBlu"))
+                            Text("Add new Goat").foregroundColor(Color("darkBlu"))
+                                .foregroundColor(.white)
                         }
                     }
                 })
             }
             .sheet(isPresented: $presentAddNewGoatScreen) {
-                AddGoatView().navigationBarTitle("Add G.O.A.T")
+                AddGoatView().navigationBarTitle("Add new G.O.A.T")
             }.background(Color("bgColor"))
             
             

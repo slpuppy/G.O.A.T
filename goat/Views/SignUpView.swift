@@ -25,7 +25,7 @@ struct SignUpView: View {
                     .scaledToFit()
                     .padding(.leading, 50)
                     .padding(.trailing, 50)
-                    .padding(.bottom, 20)
+                    .padding(.bottom, 30)
                 
                 TextField("Email", text: $email)
                     .padding()

@@ -34,7 +34,7 @@ class GoatItemViewModel: ObservableObject {
     private func updateGoatInfo(_ goat: GoatItem) {
         if let documentId = goat.docID {
             do {
-                try dataBase.collection("goats").document(documentId).setData(from: goat)
+                try dataBase.collection("goats").document(documentId).setData(from: goat) 
             } catch {
                 print(error)
                 

@@ -33,16 +33,7 @@ class GoatsViewModel: ObservableObject {
                 
                return try? queryDocumentSnapshot.data(as: GoatItem.self)
                 
-                
-//                let data = queryDocumentSnapshot.data()
-//
-//                let title = data["title"] as? String ?? ""
-//                let link = data["link"] as? String ?? ""
-//
-//                return GoatItem(title: title, link: link)
-                
-                
-            }
+           }
             
         }
         

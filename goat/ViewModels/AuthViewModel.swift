@@ -7,6 +7,8 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 
 class AuthViewModel: ObservableObject {
@@ -44,10 +46,28 @@ class AuthViewModel: ObservableObject {
             DispatchQueue.main.async {
                 
                 //Sucess
+                print("Sucess")
                 self?.signedIn = true
+                
+                let db = Firestore.firestore()
+                let uid = result!.user.uid
+                
+                db.collection("users").document(uid).setData( ["email": email, "uid": uid]) { (error) in
+                    
+                    if  error != nil {
+                        
+                       print("Error saving user data")
+                        
+                    }
+                    
+                    
+                    
+                }
             }
         }
     }
+    
+ 
     
     
     func signOut() {

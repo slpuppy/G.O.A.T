@@ -6,15 +6,23 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ConfigView: View {
     
     @EnvironmentObject var viewModel: AuthViewModel
     
+    private var auth = Auth.auth()
+    
+    @ObservedObject private var vM = UserViewModel()
+    
     var body: some View {
        
         VStack{
-        Button(action: {
+            
+            
+        
+                Button(action: {
             
             viewModel.signOut()
             

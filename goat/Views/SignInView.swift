@@ -16,7 +16,7 @@ struct SignInView: View {
                 .scaledToFit()
                 .padding(.leading, 50)
                 .padding(.trailing, 50)
-                .padding(.bottom, 20)
+                .padding(.bottom, 30)
             TextField("Email", text: $email)
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
@@ -48,7 +48,7 @@ struct SignInView: View {
                         .frame(maxHeight: 60)
                         .padding()
                     Text("Sign In").font(.system(size: 18))
-                        .foregroundColor(Color("darkBlu"))
+                        .foregroundColor(Color.white)
                 }})
             
             NavigationLink("Create Account", destination: SignUpView())
