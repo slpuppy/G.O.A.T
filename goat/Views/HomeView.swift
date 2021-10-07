@@ -37,7 +37,7 @@ struct HomeView: View {
                 })
             }
             .sheet(isPresented: $presentAddNewGoatScreen) {
-                AddGoatView().navigationBarTitle("Add new G.O.A.T")
+                AddGoatView(mode: .publicGoat).navigationBarTitle("Add new G.O.A.T")
             }.background(Color("bgColor"))
             
             

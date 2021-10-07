@@ -13,10 +13,25 @@ import SwiftUI
 
 struct AddGoatView: View {
     
+    enum Mode {
+        
+        case publicGoat
+        case personalGoat
+        case editPublicGoat
+        case editPersonalGoat
+  
+    }
+    
  @Environment(\.presentationMode) var presentationMode
     
  @StateObject var viewModel = GoatItemViewModel()
     
+ @State var mode: Mode
+    
+    
+
+    
+   
     
     var body: some View {
         
@@ -53,7 +68,19 @@ struct AddGoatView: View {
             
         Button(action: {
             
-            handleSaveTapped()
+            switch mode {
+                
+            case .publicGoat:
+                handlePublicSaveTapped()
+            case .personalGoat:
+                handlePersonalSaveTapped()
+            case .editPublicGoat:
+                handlePublicSaveTapped()
+            case .editPersonalGoat:
+                handlePersonalSaveTapped()
+         }
+            
+           
             
         }, label: {
            ZStack{
@@ -69,14 +96,28 @@ struct AddGoatView: View {
             Spacer()
         }.padding()
             .navigationBarTitle("Add G.O.A.T")
+            .onAppear{
+                print(mode)
+                
+            }
     
     }
 
-    func handleSaveTapped() {
+    func handlePublicSaveTapped() {
         
         viewModel.save()
         dismiss()
    }
+    
+    func handlePersonalSaveTapped() {
+        
+        viewModel.saveUserGoat()
+        dismiss()
+   }
+    
+    
+    
+    
 
     func dismiss() {
         
@@ -92,8 +133,3 @@ struct AddGoatView: View {
 
 
 
-struct AddGoatView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddGoatView()
-    }
-}

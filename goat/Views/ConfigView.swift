@@ -11,18 +11,37 @@ import FirebaseAuth
 struct ConfigView: View {
     
     @EnvironmentObject var viewModel: AuthViewModel
-    
+    @Environment(\.presentationMode) var presentaionMode
     private var auth = Auth.auth()
+    @State var isAddGoatPresented = false
     
-    @ObservedObject private var vM = UserViewModel()
+   
     
     var body: some View {
        
         VStack{
             
+            UserGoatList()
             
-        
-                Button(action: {
+           Button(action: {
+                    isAddGoatPresented.toggle()
+                }, label: {
+                    ZStack {
+                        Rectangle()
+                            .cornerRadius(15)
+                            .foregroundColor(Color("mainPink"))
+                            .frame(maxHeight: 60)
+                            .padding()
+                        
+                        HStack{
+                            Image(systemName: "plus.circle").foregroundColor(Color("darkBlu"))
+                            Text("Add personal Goat").foregroundColor(Color("darkBlu"))
+                                .foregroundColor(.white)
+                        }
+                    }
+                })
+            
+            Button(action: {
             
             viewModel.signOut()
             
@@ -40,12 +59,22 @@ struct ConfigView: View {
             }
             
         })
+            }
+            .sheet(isPresented: $isAddGoatPresented) {
+                AddGoatView(mode: .personalGoat).navigationBarTitle("Add new G.O.A.T")
+            }.background(Color("bgColor"))
+            
+            
+            
+            
+            
+   
     
         }
     
     
     }
-}
+
 
 struct ConfigView_Previews: PreviewProvider {
     static var previews: some View {

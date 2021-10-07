@@ -7,6 +7,8 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseFirestoreSwift
+import FirebaseAuth
 import UIKit
 
 
@@ -15,7 +17,10 @@ class GoatItemViewModel: ObservableObject {
     
     @Published var goat: GoatItem = GoatItem(title: "", link: "", comments: [""])
     
+    
     private var dataBase = Firestore.firestore()
+    
+    private var auth = Auth.auth()
     
     
    private func addGoat(goat: GoatItem) {
@@ -26,12 +31,33 @@ class GoatItemViewModel: ObservableObject {
         }
     }
     
+    
+    private func addUserGoat(goat: GoatItem) {
+         
+        do {
+           
+            let docRef = dataBase.collection("users").document(auth.currentUser!.uid)
+            
+            try docRef.collection("usergoats").addDocument(from: goat)
+            
+         } catch {
+             print(error)
+         }
+     }
+    
+    
    func save() {
-        updateOrAddGoat()
-        }
+        updateOrAddGoat()}
+    
+    func saveUserGoat() {
+        
+        addUserGoat(goat: goat)
+        
+    }
     
     
     private func updateGoatInfo(_ goat: GoatItem) {
+        
         if let documentId = goat.docID {
             do {
                 try dataBase.collection("goats").document(documentId).setData(from: goat) 
@@ -57,6 +83,9 @@ class GoatItemViewModel: ObservableObject {
         
         
     }
+    
+    
+    
     
    
     

@@ -1,27 +1,26 @@
 //
-//  GoatList.swift
+//  UserGoatList.swift
 //  goat
 //
-//  Created by Gabriel Puppi on 29/09/21.
+//  Created by Gabriel Puppi on 07/10/21.
 //
 
 import SwiftUI
 
-struct GoatList: View {
+struct UserGoatList: View {
     
     @ObservedObject private var viewModel = GoatsViewModel()
     
-    
-   var body: some View {
+
+    var body: some View {
         
     
        ScrollView {
            
            VStack {
-               
-               ForEach(viewModel.goats) { goat in
+               ForEach(viewModel.usersGoats) { goat in
                         
-                GoatListRow(row: goat)
+                UserGoatListRow(row: goat)
                
                }.padding([.leading, .trailing], 20)
            
@@ -31,13 +30,13 @@ struct GoatList: View {
     
     .onAppear() {
             
-            self.viewModel.fetchPublicData()
+            self.viewModel.fetchUserData()
             
         }
   }
 }
 
-struct GoatListRow: View {
+struct UserGoatListRow: View {
     
     @StateObject var row: GoatItem
     
@@ -76,12 +75,11 @@ struct GoatListRow: View {
     
     
 }
-    
 
 
-    
-struct GoatList_Previews: PreviewProvider {
+
+struct UserGoatList_Previews: PreviewProvider {
     static var previews: some View {
-        GoatList()
+        UserGoatList()
     }
 }

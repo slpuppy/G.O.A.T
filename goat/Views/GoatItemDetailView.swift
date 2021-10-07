@@ -117,7 +117,7 @@ struct GoatItemDetailView: View {
             Spacer()
             
         }.sheet(isPresented: $presentAddNewGoatScreen) {
-            AddGoatView().navigationBarTitle("Add G.O.A.T")
+            AddGoatView(mode: .editPublicGoat).navigationBarTitle("Add G.O.A.T")
         }.background(Color("bgColor"))
     }
     

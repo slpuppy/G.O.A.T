@@ -25,8 +25,8 @@
 		75B8865D2704B13D00C58051 /* GoatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8865C2704B13D00C58051 /* GoatItem.swift */; };
 		75B886612704C21400C58051 /* GoatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B886602704C21400C58051 /* GoatsViewModel.swift */; };
 		75B886632704C25B00C58051 /* GoatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B886622704C25B00C58051 /* GoatList.swift */; };
+		75D9C9EA270F3BEF00AFCB9C /* UserGoatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C9E9270F3BEF00AFCB9C /* UserGoatList.swift */; };
 		75FF8907270DEBDB00ADEC81 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FF8906270DEBDB00ADEC81 /* User.swift */; };
-		75FF8909270DED4900ADEC81 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FF8908270DED4900ADEC81 /* UserViewModel.swift */; };
 		88DB356D092562F38BF71DEC /* Pods_goat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6210D1EBBFB51725DB3DAD /* Pods_goat.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,8 +52,8 @@
 		75B8865C2704B13D00C58051 /* GoatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoatItem.swift; sourceTree = "<group>"; };
 		75B886602704C21400C58051 /* GoatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoatsViewModel.swift; sourceTree = "<group>"; };
 		75B886622704C25B00C58051 /* GoatList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoatList.swift; sourceTree = "<group>"; };
+		75D9C9E9270F3BEF00AFCB9C /* UserGoatList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGoatList.swift; sourceTree = "<group>"; };
 		75FF8906270DEBDB00ADEC81 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		75FF8908270DED4900ADEC81 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		AB052FF27A382C2C959D0208 /* Pods-goat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-goat.debug.xcconfig"; path = "Target Support Files/Pods-goat/Pods-goat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +131,7 @@
 				754303E12705EDA5003A70E6 /* GoatItemDetailView.swift */,
 				7512269E2708058C00C806BF /* ConfigView.swift */,
 				751226A02708070F00C806BF /* LaunchView.swift */,
+				75D9C9E9270F3BEF00AFCB9C /* UserGoatList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,7 +142,6 @@
 				75B886562704A57400C58051 /* AuthViewModel.swift */,
 				75B886602704C21400C58051 /* GoatsViewModel.swift */,
 				754303DA270526DE003A70E6 /* GoatItemViewModel.swift */,
-				75FF8908270DED4900ADEC81 /* UserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -298,9 +298,9 @@
 				754303E02705E68D003A70E6 /* AddGoatView.swift in Sources */,
 				75B886612704C21400C58051 /* GoatsViewModel.swift in Sources */,
 				754303E22705EDA5003A70E6 /* GoatItemDetailView.swift in Sources */,
+				75D9C9EA270F3BEF00AFCB9C /* UserGoatList.swift in Sources */,
 				7512269F2708058C00C806BF /* ConfigView.swift in Sources */,
 				75B886632704C25B00C58051 /* GoatList.swift in Sources */,
-				75FF8909270DED4900ADEC81 /* UserViewModel.swift in Sources */,
 				75B8865B2704A8A200C58051 /* HomeView.swift in Sources */,
 				75019B942701F55200FD8C90 /* goatApp.swift in Sources */,
 			);
