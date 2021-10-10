@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserGoatList: View {
     
-    @ObservedObject private var viewModel = GoatsViewModel()
+    @StateObject private var viewModel = GoatsViewModel()
     
 
     var body: some View {
@@ -42,7 +42,7 @@ struct UserGoatListRow: View {
     
     var body: some View {
         
-        NavigationLink(destination: GoatItemDetailView(goatPressed: row.self)) {
+      NavigationLink(destination: UserGoatItemDetailView(goatPressed: row.self)) {
         
        ZStack{
             VStack {

@@ -67,6 +67,11 @@ class AuthViewModel: ObservableObject {
         }
     }
     
+    func sendPasswordReset(withEmail email: String, _ callback: ((Error?) -> ())? = nil){
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            callback?(error)
+        }
+    }
  
     
     

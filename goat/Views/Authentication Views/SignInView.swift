@@ -17,6 +17,8 @@ struct SignInView: View {
                 .padding(.leading, 50)
                 .padding(.trailing, 50)
                 .padding(.bottom, 30)
+                .padding(.top, 20)
+                
             TextField("Email", text: $email)
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
@@ -30,7 +32,7 @@ struct SignInView: View {
                 .padding()
                 .background(Color("mainBlu")).opacity(0.5)
                 .cornerRadius(15.0)
-                .padding(.bottom, 10)
+                .padding(.bottom, 25)
             Button(action: {
                 
                 guard !email.isEmpty, !password.isEmpty else {
@@ -44,20 +46,45 @@ struct SignInView: View {
                 ZStack{
                     Rectangle()
                         .cornerRadius(15)
+                        .foregroundColor(Color("mainBlu"))
+                        .frame(maxHeight: 60)
+                      
+                    Text("Sign In").font(.system(size: 18))
+                        .foregroundColor(Color("darkBlu"))
+                }.padding([.leading, .trailing], 20)})
+            
+            Text("or")
+                .foregroundColor(Color("mainBlu"))
+            
+            NavigationLink(destination: SignUpView(), label: {
+                
+                ZStack{
+                    Rectangle()
+                        .cornerRadius(15)
                         .foregroundColor(Color("mainPink"))
                         .frame(maxHeight: 60)
-                        .padding()
-                    Text("Sign In").font(.system(size: 18))
+                       
+                    Text("Create an account").font(.system(size: 18))
                         .foregroundColor(Color.white)
-                }})
+                }.padding([.leading, .trailing], 20)
+            })
             
-            NavigationLink("Create Account", destination: SignUpView())
-                .font(.system(size: 18))
-                .foregroundColor(Color("mainBlu"))
-                .padding()
+            NavigationLink(destination: ResetPasswordView(), label:{
+                
+                Text("Forgot your password ? Click here")
+                    .font(.system(size: 14))
+                    .padding(.top, 20)
+               
+               .foregroundColor(Color("mainPink"))
+                
+                
+            })
+            
+            
             
             Spacer()
         }.padding(20)
+            .navigationBarHidden(true)
         
     }
 }

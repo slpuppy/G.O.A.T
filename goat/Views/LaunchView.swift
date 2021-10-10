@@ -28,6 +28,7 @@ struct LaunchView: View {
         }.onAppear{
             viewModel.signedIn = viewModel.isSignedIn
     }
+        .navigationViewStyle(StackNavigationViewStyle())
   }
 }
 

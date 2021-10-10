@@ -12,13 +12,15 @@
 		75019B982701F55500FD8C90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75019B972701F55500FD8C90 /* Assets.xcassets */; };
 		75019B9B2701F55500FD8C90 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75019B9A2701F55500FD8C90 /* Preview Assets.xcassets */; };
 		75019BA72703512F00FD8C90 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75019BA62703512F00FD8C90 /* SignInView.swift */; };
-		7512269F2708058C00C806BF /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7512269E2708058C00C806BF /* ConfigView.swift */; };
+		7512269F2708058C00C806BF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7512269E2708058C00C806BF /* ProfileView.swift */; };
 		751226A12708070F00C806BF /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751226A02708070F00C806BF /* LaunchView.swift */; };
 		754303DB270526DE003A70E6 /* GoatItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754303DA270526DE003A70E6 /* GoatItemViewModel.swift */; };
 		754303DE27052C3E003A70E6 /* JSONRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754303DD27052C3E003A70E6 /* JSONRepresentable.swift */; };
 		754303E02705E68D003A70E6 /* AddGoatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754303DF2705E68D003A70E6 /* AddGoatView.swift */; };
 		754303E22705EDA5003A70E6 /* GoatItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754303E12705EDA5003A70E6 /* GoatItemDetailView.swift */; };
-		75B886552703CDC900C58051 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75B886542703CDC900C58051 /* GoogleService-Info.plist */; };
+		7599AF5B27139E56001F7AEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7599AF5A27139E56001F7AEE /* GoogleService-Info.plist */; };
+		7599AF5D2713A0ED001F7AEE /* ResetFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7599AF5C2713A0ED001F7AEE /* ResetFeedbackView.swift */; };
+		75A419F22713916E00DE3E77 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A419F12713916E00DE3E77 /* ResetPasswordView.swift */; };
 		75B886572704A57400C58051 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B886562704A57400C58051 /* AuthViewModel.swift */; };
 		75B886592704A5F800C58051 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B886582704A5F800C58051 /* SignUpView.swift */; };
 		75B8865B2704A8A200C58051 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8865A2704A8A200C58051 /* HomeView.swift */; };
@@ -26,6 +28,8 @@
 		75B886612704C21400C58051 /* GoatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B886602704C21400C58051 /* GoatsViewModel.swift */; };
 		75B886632704C25B00C58051 /* GoatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B886622704C25B00C58051 /* GoatList.swift */; };
 		75D9C9EA270F3BEF00AFCB9C /* UserGoatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C9E9270F3BEF00AFCB9C /* UserGoatList.swift */; };
+		75EA1E10270F93BB0079C003 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA1E0F270F93BB0079C003 /* ConfigView.swift */; };
+		75EA1E12270F97020079C003 /* UserGoatItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA1E11270F97020079C003 /* UserGoatItemDetailView.swift */; };
 		75FF8907270DEBDB00ADEC81 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FF8906270DEBDB00ADEC81 /* User.swift */; };
 		88DB356D092562F38BF71DEC /* Pods_goat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6210D1EBBFB51725DB3DAD /* Pods_goat.framework */; };
 /* End PBXBuildFile section */
@@ -39,13 +43,15 @@
 		75019B972701F55500FD8C90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75019B9A2701F55500FD8C90 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		75019BA62703512F00FD8C90 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		7512269E2708058C00C806BF /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		7512269E2708058C00C806BF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		751226A02708070F00C806BF /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		754303DA270526DE003A70E6 /* GoatItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoatItemViewModel.swift; sourceTree = "<group>"; };
 		754303DD27052C3E003A70E6 /* JSONRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRepresentable.swift; sourceTree = "<group>"; };
 		754303DF2705E68D003A70E6 /* AddGoatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoatView.swift; sourceTree = "<group>"; };
 		754303E12705EDA5003A70E6 /* GoatItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoatItemDetailView.swift; sourceTree = "<group>"; };
-		75B886542703CDC900C58051 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7599AF5A27139E56001F7AEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7599AF5C2713A0ED001F7AEE /* ResetFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetFeedbackView.swift; sourceTree = "<group>"; };
+		75A419F12713916E00DE3E77 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		75B886562704A57400C58051 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		75B886582704A5F800C58051 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		75B8865A2704A8A200C58051 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -53,6 +59,8 @@
 		75B886602704C21400C58051 /* GoatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoatsViewModel.swift; sourceTree = "<group>"; };
 		75B886622704C25B00C58051 /* GoatList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoatList.swift; sourceTree = "<group>"; };
 		75D9C9E9270F3BEF00AFCB9C /* UserGoatList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGoatList.swift; sourceTree = "<group>"; };
+		75EA1E0F270F93BB0079C003 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		75EA1E11270F97020079C003 /* UserGoatItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGoatItemDetailView.swift; sourceTree = "<group>"; };
 		75FF8906270DEBDB00ADEC81 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AB052FF27A382C2C959D0208 /* Pods-goat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-goat.debug.xcconfig"; path = "Target Support Files/Pods-goat/Pods-goat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,7 +89,6 @@
 		75019B872701F55200FD8C90 = {
 			isa = PBXGroup;
 			children = (
-				75B886542703CDC900C58051 /* GoogleService-Info.plist */,
 				75019B922701F55200FD8C90 /* goat */,
 				75019B912701F55200FD8C90 /* Products */,
 				21301FBE262C2E5B8F308D20 /* Pods */,
@@ -100,6 +107,7 @@
 		75019B922701F55200FD8C90 /* goat */ = {
 			isa = PBXGroup;
 			children = (
+				7599AF5A27139E56001F7AEE /* GoogleService-Info.plist */,
 				75019B932701F55200FD8C90 /* goatApp.swift */,
 				754303DC27052C2B003A70E6 /* Utilities */,
 				75019BA32701F5BD00FD8C90 /* Models */,
@@ -123,15 +131,16 @@
 			isa = PBXGroup;
 			children = (
 				75019B952701F55200FD8C90 /* ContentView.swift */,
+				75A419F32713917300DE3E77 /* Authentication Views */,
 				75B8865A2704A8A200C58051 /* HomeView.swift */,
-				75019BA62703512F00FD8C90 /* SignInView.swift */,
 				75B886622704C25B00C58051 /* GoatList.swift */,
-				75B886582704A5F800C58051 /* SignUpView.swift */,
 				754303DF2705E68D003A70E6 /* AddGoatView.swift */,
 				754303E12705EDA5003A70E6 /* GoatItemDetailView.swift */,
-				7512269E2708058C00C806BF /* ConfigView.swift */,
+				75EA1E11270F97020079C003 /* UserGoatItemDetailView.swift */,
+				7512269E2708058C00C806BF /* ProfileView.swift */,
 				751226A02708070F00C806BF /* LaunchView.swift */,
 				75D9C9E9270F3BEF00AFCB9C /* UserGoatList.swift */,
+				75EA1E0F270F93BB0079C003 /* ConfigView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,6 +170,17 @@
 				754303DD27052C3E003A70E6 /* JSONRepresentable.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		75A419F32713917300DE3E77 /* Authentication Views */ = {
+			isa = PBXGroup;
+			children = (
+				75B886582704A5F800C58051 /* SignUpView.swift */,
+				75019BA62703512F00FD8C90 /* SignInView.swift */,
+				75A419F12713916E00DE3E77 /* ResetPasswordView.swift */,
+				7599AF5C2713A0ED001F7AEE /* ResetFeedbackView.swift */,
+			);
+			path = "Authentication Views";
 			sourceTree = "<group>";
 		};
 		9EA2E91809733F9DD79FBEEC /* Frameworks */ = {
@@ -233,7 +253,7 @@
 			files = (
 				75019B9B2701F55500FD8C90 /* Preview Assets.xcassets in Resources */,
 				75019B982701F55500FD8C90 /* Assets.xcassets in Resources */,
-				75B886552703CDC900C58051 /* GoogleService-Info.plist in Resources */,
+				7599AF5B27139E56001F7AEE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,14 +312,18 @@
 				75B886592704A5F800C58051 /* SignUpView.swift in Sources */,
 				75FF8907270DEBDB00ADEC81 /* User.swift in Sources */,
 				75019B962701F55200FD8C90 /* ContentView.swift in Sources */,
+				75EA1E12270F97020079C003 /* UserGoatItemDetailView.swift in Sources */,
+				75A419F22713916E00DE3E77 /* ResetPasswordView.swift in Sources */,
 				754303DB270526DE003A70E6 /* GoatItemViewModel.swift in Sources */,
 				754303DE27052C3E003A70E6 /* JSONRepresentable.swift in Sources */,
 				75019BA72703512F00FD8C90 /* SignInView.swift in Sources */,
 				754303E02705E68D003A70E6 /* AddGoatView.swift in Sources */,
 				75B886612704C21400C58051 /* GoatsViewModel.swift in Sources */,
 				754303E22705EDA5003A70E6 /* GoatItemDetailView.swift in Sources */,
+				75EA1E10270F93BB0079C003 /* ConfigView.swift in Sources */,
+				7599AF5D2713A0ED001F7AEE /* ResetFeedbackView.swift in Sources */,
 				75D9C9EA270F3BEF00AFCB9C /* UserGoatList.swift in Sources */,
-				7512269F2708058C00C806BF /* ConfigView.swift in Sources */,
+				7512269F2708058C00C806BF /* ProfileView.swift in Sources */,
 				75B886632704C25B00C58051 /* GoatList.swift in Sources */,
 				75B8865B2704A8A200C58051 /* HomeView.swift in Sources */,
 				75019B942701F55200FD8C90 /* goatApp.swift in Sources */,

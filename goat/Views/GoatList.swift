@@ -43,6 +43,9 @@ struct GoatListRow: View {
     
     var body: some View {
         
+       
+      
+        
         NavigationLink(destination: GoatItemDetailView(goatPressed: row.self)) {
         
        ZStack{

@@ -1,13 +1,13 @@
 //
-//  GoatItemDetailView.swift
+//  UserGoatItemDetailView.swift
 //  goat
 //
-//  Created by Gabriel Puppi on 30/09/21.
+//  Created by Gabriel Puppi on 07/10/21.
 //
 
 import SwiftUI
 
-struct GoatItemDetailView: View {
+struct UserGoatItemDetailView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -15,23 +15,19 @@ struct GoatItemDetailView: View {
     
     @StateObject var goatPressed: GoatItem
     
-     @State private var presentAddNewGoatScreen = false
+    @State private var presentAddNewGoatScreen = false
     
     @State private var showingOptions = false
     
     @StateObject var viewModel = GoatItemViewModel()
     
-    
-    
     var body: some View {
-        
+       
         VStack{
             
             HStack {
                 Text(goatPressed.title)
-                    .font(.system(size: 28,
-                                  weight: .bold,
-                                  design: .default))
+                    .font(.system(size: 28, weight: .bold, design: .default))
                     .foregroundColor(Color("mainPink"))
                 
                 
@@ -41,35 +37,26 @@ struct GoatItemDetailView: View {
             Image("whitegoat")
                 .resizable()
                 .scaledToFit()
-                .padding(
-                    [.leading, .trailing], 40)
+                .padding([.leading, .trailing], 40)
             
             
             
             HStack{
                 Image(systemName: "link")
-                    .font(.system(size: 22,
-                                  weight: .bold,
-                                  design: .default))
+                    .font(.system(size: 22, weight: .bold, design: .default))
                     .foregroundColor(Color("mainPink"))
                 Text("Acess link:")
-                    .font(.system(size: 22,
-                                  weight: .bold,
-                                  design: .default))
+                    .font(.system(size: 22, weight: .bold, design: .default))
                     .foregroundColor(Color("textColor"))
             }.padding(.bottom, 10)
             
             
             HStack{
                 Text(goatPressed.link)
-                    .font(.system(size: 15,
-                                  weight: .regular,
-                                  design: .default))
+                    .font(.system(size: 15, weight: .regular, design: .default))
                     .foregroundColor(.white)
-                    .padding(
-                        [.leading, .trailing], 30)
-                    .padding(
-                        [.top,.bottom], 10)
+                    .padding([.leading, .trailing], 30)
+                    .padding([.top,.bottom], 10)
                     .multilineTextAlignment(.center)
                 
                 
@@ -83,19 +70,14 @@ struct GoatItemDetailView: View {
                     Image(systemName: "pencil.circle")
                         .font(.system(size: 30))
                         .foregroundColor(.white)
-                        .padding(
-                            [.leading, .trailing], 15)
-                        .padding(
-                            [.top,.bottom], 5)
+                        .padding([.leading, .trailing], 15)
+                        .padding([.top,.bottom], 5)
                })
            }
             .background(Color("mainPink"))
             .cornerRadius(50)
             .padding([.top,.bottom], 5)
-            .shadow(color: Color.black.opacity(0.1),
-                    radius: 13,
-                    x: 0,
-                    y: 4)
+            .shadow(color: Color.black.opacity(0.1), radius: 13, x: 0, y: 4)
             .padding([.leading, .trailing], 10)
             .onTapGesture {
                 openURL(URL(string: goatPressed.link)!)
@@ -126,38 +108,25 @@ struct GoatItemDetailView: View {
                                     
                                         .destructive(Text("Delete")) {
                                             
-                                            self.viewModel.removePublicGoat(id: goatPressed.docID)
+                                            self.viewModel.removeUserGoat(id: goatPressed.docID)
                                         }
                                 ])
                 })
             Spacer()
             
-        }.sheet(isPresented: $presentAddNewGoatScreen) {
-            AddGoatView(mode: .editPublicGoat).navigationBarTitle("Add G.O.A.T")
+        }
+        .sheet(isPresented: $presentAddNewGoatScreen) {
+            AddGoatView(mode: .editPersonalGoat).navigationBarTitle("Add G.O.A.T")
         }.background(Color("bgColor"))
-    }
-    
-    
-    func handleDeletePressed(id: String?){
+           
         
-        
-        self.viewModel.removePublicGoat(id: goatPressed.docID)
-        dismiss()
         
         
     }
-    
-    func dismiss() {
-        
-        
-        self.presentationMode.wrappedValue.dismiss()
-        
-    }
-    
 }
 
-//struct GoatItemDetailView_Previews: PreviewProvider {
+//struct UserGoatItemDetailView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        GoatItemDetailView()
+//        UserGoatItemDetailView()
 //    }
 //}

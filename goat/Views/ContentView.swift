@@ -10,8 +10,9 @@ import SwiftUI
 
 enum Tabs: String {
     
-    case home = "Goats"
-    case profile = "Profile"
+    case home = "Shared Goats"
+    case profile = "Your Goats"
+    case config = "Settings"
     
 }
 
@@ -31,14 +32,27 @@ struct ContentView: View {
                     }
                     .tag(Tabs.home)
                 
-                ConfigView()
+                ProfileView()
                     .tabItem{
                         
-                        Image(systemName: "gearshape")
+                        Image(systemName: "person.crop.circle")
                            
                         
                     }
                     .tag(Tabs.profile)
+            
+            ConfigView()
+                .tabItem{
+                    
+                    Image(systemName: "gearshape")
+                    
+                    
+                }
+                .tag(Tabs.config)
+            
+            
+            
+            
                 
             }
         

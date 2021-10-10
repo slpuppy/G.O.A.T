@@ -43,9 +43,8 @@ class GoatsViewModel: ObservableObject {
     
     func fetchUserData() {
         
-        let userRef = dataBase.collection("users").document(auth.currentUser!.uid)
-        
-        userRef.collection("usergoats").addSnapshotListener { (querySnapshot, error) in
+            dataBase.collection("users").document(auth.currentUser!.uid)
+                        .collection("usergoats").addSnapshotListener { (querySnapshot, error) in
                 
                 guard let documents = querySnapshot?.documents else {
                     print("No usergoats")

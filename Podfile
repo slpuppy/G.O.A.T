@@ -9,7 +9,7 @@ target 'goat' do
  pod 'Firebase/Core'
  pod 'Firebase/Auth'
  pod 'Firebase/Firestore'
- pod 'FirebaseFirestoreSwift', '8.1.0-beta'
+ pod 'FirebaseFirestoreSwift', '8.8.0-beta'
  
 
   

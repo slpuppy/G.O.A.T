@@ -2,6 +2,7 @@
 
 import SwiftUI
 import Firebase
+import FirebaseAuth
 
 @main
 struct goatApp: App {
@@ -20,7 +21,7 @@ struct goatApp: App {
 
 
 
-class AppDelegate: NSObject ,UIApplicationDelegate {
+class AppDelegate: NSObject , UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:
     [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -30,7 +31,4 @@ class AppDelegate: NSObject ,UIApplicationDelegate {
         return true
         
     }
-    
-    
-    
 }

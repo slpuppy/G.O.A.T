@@ -17,7 +17,6 @@ class GoatItemViewModel: ObservableObject {
     
     @Published var goat: GoatItem = GoatItem(title: "", link: "", comments: [""])
     
-    
     private var dataBase = Firestore.firestore()
     
     private var auth = Auth.auth()
@@ -47,7 +46,8 @@ class GoatItemViewModel: ObservableObject {
     
     
    func save() {
-        updateOrAddGoat()}
+        
+       updateOrAddGoat()}
     
     func saveUserGoat() {
         
@@ -59,8 +59,12 @@ class GoatItemViewModel: ObservableObject {
     private func updateGoatInfo(_ goat: GoatItem) {
         
         if let documentId = goat.docID {
+            
+            print(goat.docID!)
+            
             do {
-                try dataBase.collection("goats").document(documentId).setData(from: goat) 
+                try dataBase.collection("goats").document(documentId).setData(from: goat)
+                print("updated")
             } catch {
                 print(error)
                 
@@ -85,13 +89,7 @@ class GoatItemViewModel: ObservableObject {
     }
     
     
-    
-    
-   
-    
-    
-    
-    func removeGoat(id: String?) {
+  func removePublicGoat(id: String?) {
         if let documentId = id {
             print(documentId)
             dataBase.collection("goats").document(documentId).delete() { error in
@@ -103,10 +101,25 @@ class GoatItemViewModel: ObservableObject {
             }
             
         }
-       
-       
-       
-     }
+   }
+    
+    func removeUserGoat(id: String?) {
+        
+        if let documentId = id {
+            print(documentId)
+            dataBase.collection("users").document(auth.currentUser!.uid)
+                .collection("usergoats").document(documentId).delete() { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+                
+                
+            }
+            
+        }
+        
+        
+    }
     
     
 
