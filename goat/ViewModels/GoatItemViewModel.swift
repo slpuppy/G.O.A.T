@@ -22,7 +22,7 @@ class GoatItemViewModel: ObservableObject {
     private var auth = Auth.auth()
     
     
-   private func addGoat(goat: GoatItem) {
+  func addGoat(goat: GoatItem) {
         do {
            let _  = try dataBase.collection("goats").addDocument(from: goat)
         } catch {
@@ -31,7 +31,7 @@ class GoatItemViewModel: ObservableObject {
     }
     
     
-    private func addUserGoat(goat: GoatItem) {
+  func addUserGoat(goat: GoatItem) {
          
         do {
            
@@ -72,6 +72,8 @@ class GoatItemViewModel: ObservableObject {
         }
     }
     
+    
+    
     private func updateOrAddGoat() {
         
         if let _ = goat.docID {
@@ -79,6 +81,7 @@ class GoatItemViewModel: ObservableObject {
             self.updateGoatInfo(self.goat)
             
         }
+       
         else {
             
             addGoat(goat: goat)
@@ -102,6 +105,26 @@ class GoatItemViewModel: ObservableObject {
             
         }
    }
+    
+    func updateGoat(id: String?) {
+        
+        if let documentId = id {
+            
+            do {
+                print(documentId)
+                try dataBase.collection("usergoats").document(documentId).setData(from: goat)
+            } catch {
+                
+            print(error)
+                
+            }
+            
+            
+        }
+        
+        
+    }
+    
     
     func removeUserGoat(id: String?) {
         

@@ -11,6 +11,10 @@ struct ResetPasswordView: View {
     
     @State var passwordResetEmail: String = ""
     
+    @Environment(\.presentationMode) var presentationMode
+    
+    @State var feedbackSheet = false
+    
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
@@ -18,7 +22,7 @@ struct ResetPasswordView: View {
         VStack{
             
             
-            Text("Enter the email of your account")
+            Text("Enter the email of your account").padding().font(.system(size: 16, weight: .semibold, design: .default))
             
             TextField("Account email", text: $passwordResetEmail)
                 .padding()
@@ -31,12 +35,17 @@ struct ResetPasswordView: View {
                 
                 viewModel.sendPasswordReset(withEmail: passwordResetEmail) { error in
                     
+                    if error != nil {
+                        
+                        print("error sending email")
+                        
+                    } else if error == nil {
+                        
+                        print ("email sent")
+                        feedbackSheet.toggle()
+                    }
                     
-                    print("EMAIL DONT EXIST")
                 }
-                
-                
-                
             }, label: {
                 
                 ZStack{
@@ -45,12 +54,20 @@ struct ResetPasswordView: View {
                         .foregroundColor(Color("mainPink"))
                         .frame(maxHeight: 60)
                       
-                    Text("Sign In").font(.system(size: 18))
+                    Text("Send reset link").font(.system(size: 18))
                         .foregroundColor(Color.white)
                 }.padding([.leading, .trailing], 20)})
                 
                 
-            }
+        }.padding([.leading, .trailing], 20)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Reset Password")
+            .sheet(isPresented: $feedbackSheet) {
+                
+                ResetFeedbackView()
+                
+            }.background(Color("bgColor"))
+        
         Spacer()
             
         

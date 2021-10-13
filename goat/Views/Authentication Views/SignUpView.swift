@@ -26,13 +26,13 @@ struct SignUpView: View {
                     .padding(.leading, 50)
                     .padding(.trailing, 50)
                     .padding(.bottom, 30)
-                
+                    .padding(.top, 20)
                 TextField("Email", text: $email)
                     .padding()
                     .background(Color("mainBlu")).opacity(0.5)
                     .cornerRadius(15.0)
                     .padding(.bottom, 10)
-                SecureField("Password", text: $password)
+                SecureInputView("Password", text: $password)
                     .padding()
                     .background(Color("mainBlu")).opacity(0.5)
                     .cornerRadius(15.0)
@@ -62,6 +62,9 @@ struct SignUpView: View {
         }
     }
 }
+
+
+
 
 
 struct SignUpView_Previews: PreviewProvider {

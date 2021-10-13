@@ -15,6 +15,8 @@ struct UserGoatItemDetailView: View {
     
     @StateObject var goatPressed: GoatItem
     
+    @State var makePublic = false
+    
     @State private var presentAddNewGoatScreen = false
     
     @State private var showingOptions = false
@@ -25,7 +27,7 @@ struct UserGoatItemDetailView: View {
        
         VStack{
             
-            HStack {
+            HStack{
                 Text(goatPressed.title)
                     .font(.system(size: 28, weight: .bold, design: .default))
                     .foregroundColor(Color("mainPink"))
@@ -63,6 +65,7 @@ struct UserGoatItemDetailView: View {
                 Button(action: {
                     
                     presentAddNewGoatScreen.toggle()
+                    viewModel.updateGoat(id: goatPressed.docID)
                     
                     
                 }, label: {
@@ -78,10 +81,13 @@ struct UserGoatItemDetailView: View {
             .cornerRadius(50)
             .padding([.top,.bottom], 5)
             .shadow(color: Color.black.opacity(0.1), radius: 13, x: 0, y: 4)
-            .padding([.leading, .trailing], 10)
+            .padding([.leading, .trailing], 20)
             .onTapGesture {
                 openURL(URL(string: goatPressed.link)!)
             }
+            
+            
+          
             
             
             

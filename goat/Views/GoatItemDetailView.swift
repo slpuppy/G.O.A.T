@@ -19,6 +19,8 @@ struct GoatItemDetailView: View {
     
     @State private var showingOptions = false
     
+    @State var liked = false
+    
     @StateObject var viewModel = GoatItemViewModel()
     
     
@@ -35,7 +37,23 @@ struct GoatItemDetailView: View {
                     .foregroundColor(Color("mainPink"))
                 
                 
-            }
+                
+                Image(systemName: self.liked == true ? "heart.fill" : "heart").font(.system(size: 28))
+                    .foregroundColor(Color("mainPink")).onTapGesture {
+                        
+                        switch liked {
+                        
+                    case true:
+                        viewModel.removeUserGoat(id: goatPressed.docID)
+                            liked.toggle()
+                    case false:
+                            viewModel.addUserGoat(goat: goatPressed)
+                        liked.toggle()
+                        }
+                    }
+                
+                
+            }.padding()
             
             
             Image("whitegoat")
@@ -43,8 +61,9 @@ struct GoatItemDetailView: View {
                 .scaledToFit()
                 .padding(
                     [.leading, .trailing], 40)
+                
             
-            
+        
             
             HStack{
                 Image(systemName: "link")
@@ -96,7 +115,7 @@ struct GoatItemDetailView: View {
                     radius: 13,
                     x: 0,
                     y: 4)
-            .padding([.leading, .trailing], 10)
+            .padding([.leading, .trailing], 20)
             .onTapGesture {
                 openURL(URL(string: goatPressed.link)!)
             }

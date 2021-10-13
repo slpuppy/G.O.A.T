@@ -12,6 +12,7 @@ struct GoatList: View {
     @ObservedObject private var viewModel = GoatsViewModel()
     
     
+    
    var body: some View {
         
     
@@ -40,7 +41,7 @@ struct GoatList: View {
 struct GoatListRow: View {
     
     @StateObject var row: GoatItem
-    
+    @Environment(\.openURL) var openURL
     var body: some View {
         
        
@@ -52,18 +53,35 @@ struct GoatListRow: View {
             VStack {
                HStack{
                Text(row.title)
-                       .font(.system(size: 24,
+                       .font(.system(size: 22,
                                      weight: .bold,
                                      design: .default))
                                                .foregroundColor(Color.white)
                                                .multilineTextAlignment(.leading)
-                                               .padding([.top, .bottom], 40)
+                                               .padding([.bottom, .top], 10)
+                                               
 
                    Spacer()
-                   Image(systemName: "link").foregroundColor(Color.white)
+                   VStack{
+                   Image(systemName: "link").foregroundColor(Color("mainPink"))
                        .font(.system(size: 20))
+                       .onTapGesture {
+                           openURL(URL(string: row.link)!)
+                       }
+                       
+                       Text("Open").font(.footnote)
+                           .foregroundColor(Color("mainPink"))
+                       
+                   }
+                   .padding()
+                   .background(Color.white)
+                   .cornerRadius(15)
+                  
                 
                }
+                   
+               
+               
                
            }.padding()
        }

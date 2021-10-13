@@ -15,6 +15,8 @@ class AuthViewModel: ObservableObject {
     
     let auth = Auth.auth()
     
+    
+    
     @Published var signedIn = false
     
     var isSignedIn: Bool {
@@ -71,6 +73,24 @@ class AuthViewModel: ObservableObject {
         Auth.auth().sendPasswordReset(withEmail: email) { error in
             callback?(error)
         }
+    }
+    
+    
+    func deleteAccount() {
+        
+        let user = auth.currentUser
+        
+        user?.delete { error in
+          if let error = error {
+            // An error happened.
+              print(error)
+              
+          } else {
+              self.signOut()
+              print("sucessfull deleted")
+          }
+        }
+        
     }
  
     
